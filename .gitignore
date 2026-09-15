@@ -1,0 +1,10 @@
+# Arquivos temporários
+*.tmp
+*.temp
+~$*
+.DS_Store
+Thumbs.db
+
+# Arquivos locais do Power BI Project, quando aplicável
+**/.pbi/localSettings.json
+**/.pbi/cache.abf

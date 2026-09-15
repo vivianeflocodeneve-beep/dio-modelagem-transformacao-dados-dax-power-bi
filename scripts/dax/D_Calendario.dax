@@ -1,0 +1,11 @@
+D_Calendario =
+ADDCOLUMNS(
+    CALENDAR(DATE(2013, 1, 1), DATE(2014, 12, 31)),
+    "Ano", YEAR([Date]),
+    "Mês", MONTH([Date]),
+    "Nome do Mês", FORMAT([Date], "MMMM"),
+    "Trimestre", "T" & FORMAT(QUARTER([Date]), "0"),
+    "Dia da Semana", WEEKDAY([Date], 2),
+    "Nome do Dia", FORMAT([Date], "dddd"),
+    "Ano-Mês", FORMAT([Date], "YYYY-MM")
+)

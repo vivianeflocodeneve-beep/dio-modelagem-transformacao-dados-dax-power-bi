@@ -1,0 +1,30 @@
+Total Vendas =
+SUM(F_Vendas[Sales])
+
+Total Lucro =
+SUM(F_Vendas[Profit])
+
+Quantidade Vendida =
+SUM(F_Vendas[Units Sold])
+
+Total Descontos =
+SUM(F_Vendas[Discounts])
+
+Custo Total =
+SUM(F_Vendas[COGS])
+
+Margem Lucro % =
+DIVIDE([Total Lucro], [Total Vendas], 0)
+
+Vendas Ano Anterior =
+CALCULATE(
+    [Total Vendas],
+    SAMEPERIODLASTYEAR(D_Calendario[Date])
+)
+
+Crescimento YoY % =
+DIVIDE(
+    [Total Vendas] - [Vendas Ano Anterior],
+    [Vendas Ano Anterior],
+    0
+)
